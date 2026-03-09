@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/Star 1.png" type="image/png">
+    <title>About - Baxter's Showcase Website</title>
+
+    <style>
+        @font-face {
+            font-family: 'Boldonse';
+            src: url('fonts/Boldonse-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            font-family: 'Boldonse', Arial, sans-serif;
+        }
+
+        .hero {
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('images/banner_image.png');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+        }
+
+        .hero-text {
+            font-size: 2rem;
+            font-weight: 700;
+            padding: 1rem 2rem;
+            text-align: center;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+            font-family: 'Boldonse', Arial, sans-serif;
+        }
+
+        .topic-content {
+            display: block;
+            text-align: center;
+            font-size: 1.5em;
+            color: #6898FF;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-text" style="font-size:3rem;">Baxter's Showcase Website</div>
+    </section>
+
+    <nav class="menu">
+        <button class="menu-toggle" aria-expanded="false" aria-label="Open menu">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="menu-items">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="index.html">Image Creation</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        (function(){
+            const btn = document.querySelector('.menu-toggle');
+            const items = document.querySelector('.menu-items');
+            if(!btn || !items) return;
+            btn.addEventListener('click', function(){
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', String(!expanded));
+                items.classList.toggle('open');
+            });
+        })();
+    </script>
+
+    <section class="topic">
+        <div class="topic-title">
+            <h4>About Baxter</h4>
+        </div>
+         <div class="topic-content">
+            <p>Hi, I'm Baxter, a student at Burnside High School. I will be posting all my creations here!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Baxter Douglas</p>
+    </footer>
+    
+</body>
+</html>
